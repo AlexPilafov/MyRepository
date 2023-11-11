@@ -1,0 +1,14 @@
+//pointers should have the same data type as the variable (int,double..)
+//pointers store an address
+//& means address
+// (data type)* (name) = &(var)
+
+#include<iostream>
+using namespace std;
+
+int n = 5;
+cout << &n << endl; // &n is the address of n
+int* ptr = &n; // ptr is a pointer to n's address in memory
+cout << *ptr << endl; //dereference the address
+*ptr = 10; //we're storing 10 in the *ptr which is the address of n
+cout << n << endl; // now the n variable has the value 10 in its address and it outputs 10

@@ -1,0 +1,32 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    int a,b;
+    cout << "Enter a number: " << endl;
+    cin >> a;
+    cout << "Enter the pow: " << endl;
+    cin >> b;
+    cout << "Result: " << endl;
+    cout << exponent(a,b) << endl;
+    return 0;
+}
+
+int multiply(int a, int b)
+{
+    int x = 0;
+    for (int i = 0; i < b; i++)
+        x += a;
+    return x;
+}
+int exponent(int a, int b)
+{
+    if (b == 0)
+        return 1;
+    int y = a;
+    for (int i = 1; i < b; i++)
+        y = multiply(y, a);
+    return y;
+}
